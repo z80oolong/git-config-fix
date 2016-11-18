@@ -1,8 +1,8 @@
 diff --git a/config.c b/config.c
-index 0dfed68..895b983 100644
+index 0dfed68..5d362ef 100644
 --- a/config.c
 +++ b/config.c
-@@ -75,6 +75,44 @@ static int zlib_compression_seen;
+@@ -75,6 +75,46 @@ static int zlib_compression_seen;
   */
  static struct config_set the_config_set;
  
@@ -35,8 +35,10 @@ index 0dfed68..895b983 100644
 +	if(_level < 0) {
 +		if(git_config_get_int("core.configlockfailure", &_level)) {
 +			_level = ERROR_CONFIG_LOCK_FAILURE;
-+		} else if ((_level < QUIET_CONFIG_LOCK_FAILURE) || (_level > ERROR_CONFIG_LOCK_FAILURE)) {
-+			_level = WARN_CONFIG_LOCK_FAILURE;
++		} else if (_level >= ERROR_CONFIG_LOCK_FAILURE) {
++			_level = ERROR_CONFIG_LOCK_FAILURE;
++		} else if (_level <= QUIET_CONFIG_LOCK_FAILURE) {
++			_level = QUIET_CONFIG_LOCK_FAILURE;
 +		}
 +	}
 +
@@ -47,7 +49,7 @@ index 0dfed68..895b983 100644
  static int config_file_fgetc(struct config_source *conf)
  {
  	return getc_unlocked(conf->u.file);
-@@ -2210,9 +2248,23 @@ int git_config_set_multivar_in_file_gently(const char *config_filename,
+@@ -2210,9 +2250,23 @@ int git_config_set_multivar_in_file_gently(const char *config_filename,
  		in_fd = -1;
  
  		if (chmod(get_lock_file_path(lock), st.st_mode & 07777) < 0) {
@@ -71,7 +73,7 @@ index 0dfed68..895b983 100644
  		}
  
  		if (store.seen == 0)
-@@ -2417,9 +2469,22 @@ int git_config_rename_section_in_file(const char *config_filename,
+@@ -2417,9 +2471,22 @@ int git_config_rename_section_in_file(const char *config_filename,
  	fstat(fileno(config_file), &st);
  
  	if (chmod(get_lock_file_path(lock), st.st_mode & 07777) < 0) {
