@@ -21,11 +21,11 @@
 
 なお、差分ファイル ```git-2.17.0-fix.diff``` は、 [git][GIT_] の安定版の [git-2.17.1][G171] にも適用可能です。
 
-そして、 [github 上の git][GTGH] のソースコードに ```git-HEAD-6f333ff2-fix.diff``` を適用するには、安定版の [github 上の git][GTGH] のソースコードが置かれているディレクトリより、以下のようにして差分ファイル ```git-HEAD-6f333ff2-fix.diff``` を適用します。
+そして、 [github 上の git][GTGH] のソースコードに ```git-HEAD-*-fix.diff``` を適用するには、安定版の [github 上の git][GTGH] のソースコードが置かれているディレクトリより、以下のようにして差分ファイル ```git-HEAD-*-fix.diff``` を適用します。
 
 ```
- $ patch -p1 < /path/to/git-HEAD-6f333ff2-fix.diff
- (ここに、/path/to/diff は、 git-HEAD-6f333ff2-fix.diff が置かれたディレクトリのパス名)
+ $ patch -p1 < /path/to/git-HEAD-*-fix.diff
+ (ここに、/path/to/diff は、 git-HEAD-*-fix.diff が置かれたディレクトリのパス名)
 ```
 
 差分ファイルの適用後は、以下のようにして git をコンパイル及びインストールします。
