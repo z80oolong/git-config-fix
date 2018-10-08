@@ -74,14 +74,21 @@
 
 なお、これに伴い、 config ファイルの lock に失敗する場合の挙動を変更する [git][GIT_] を導入するための Formula 群である [z80oolong/git][TAP1] を更新しました。こちらの方もどうか御覧下さい。
 
+### 2018/10/08 現在の追記
+
+2018/07/12 現在の git の[安定版のバージョンの 2.19.0][G180] 及び [github 上の git の HEAD の commit である fe8321ec][GIT_]に対応した差分ファイルである ```git-2.18.0-fix.diff, git-HEAD-fe8321ec-fix.diff``` を追加致しました。
+
+これに伴い、差分ファイル ```git-HEAD-e3331758-fix.diff``` を削除しました。どうか御了承下さい。
+
 <!-- 外部リンク一覧 -->
 
 [DBNR]:https://play.google.com/store/apps/details?id=com.cuntubuntu&hl=ja
 [ANDR]:https://www.android.com/intl/ja_jp/
 [GIT_]:https://git-scm.com/
-[G170]:https://www.kernel.org/pub/software/scm/git/git-2.17.0tw.tar.xz
+[G170]:https://www.kernel.org/pub/software/scm/git/git-2.17.0.tar.xz
 [G171]:https://www.kernel.org/pub/software/scm/git/git-2.17.1.tar.xz
 [G180]:https://www.kernel.org/pub/software/scm/git/git-2.18.0.tar.xz
+[G190]:https://www.kernel.org/pub/software/scm/git/git-2.19.0.tar.xz
 [GTGH]:https://github.com/git/git.git
 [LINK]:http://man7.org/linux/man-pages/man2/link.2.html
 [SLNK]:http://man7.org/linux/man-pages/man2/symlink.2.html
