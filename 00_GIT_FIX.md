@@ -10,16 +10,21 @@
 
 ## 差分ファイルの適用とコンパイル
 
-[git][GIT_] のソースコードに差分ファイルを適用するには、安定版の [git-2.17.0][G170] には、差分ファイル ```git-2.17.0-fix.diff``` を、[github 上の git][GTGH] には、差分ファイル ```git-HEAD-6f333ff2-fix.diff``` をそれぞれ適用して下さい。
+[git][GIT_] のソースコードに差分ファイルを適用するには、安定版の ```git-x.y.z``` (ここに、x, y, z は安定版のバージョン番号。以下同様。) には、差分ファイル ```git-x.y.z-fix.diff``` を、[github 上の git][GTGH] には、差分ファイル ```git-HEAD-*-fix.diff``` (ここに、 * は、 HEAD 版の commit 番号) をそれぞれ適用して下さい。
 
-例えば、安定版の [git-2.17.0][G170] のソースコードに ```git-2.17.0-fix.diff``` を適用するには、安定版の [git-2.17.0][G170] のソースコードが置かれているディレクトリより、以下のようにして差分ファイル ```git-2.17.0-fix.diff``` を適用します。
+例えば、安定版の ```git-x.y.z``` のソースコードに ```git-x.y.z-fix.diff``` を適用するには、安定版の ```git-x.y.z``` のソースコードが置かれているディレクトリより、以下のようにして差分ファイル ```git-2.17.0-fix.diff``` を適用します。
 
 ```
- $ patch -p1 < /path/to/git-2.17.0-fix.diff
- (ここに、/path/to/diff は、 git-2.17.0-fix.diff が置かれたディレクトリのパス名)
+ $ patch -p1 < /path/to/git-x.y.z-fix.diff
+ (ここに、/path/to/diff は、 git-x.y.z-fix.diff が置かれたディレクトリのパス名)
 ```
 
-なお、差分ファイル ```git-2.17.0-fix.diff``` は、 [git][GIT_] の安定版の [git-2.17.1][G171] にも適用可能です。
+なお、以下に示す差分ファイルは、それぞれ右に示す [git][GIT_] の安定版にも適用可能です。
+
+- ```git-2.17.0-fix.diff``` … [git-2.17.1][G171], [git-2.17.2][G172]
+- ```git-2.18.0-fix.diff``` … [git-2.18.1][G171]
+- ```git-2.19.0-fix.diff``` … [git-2.19.1][G171]
+- ```git-2.20.0-fix.diff``` … [git-2.20.1][G171]
 
 そして、 [github 上の git][GTGH] のソースコードに ```git-HEAD-*-fix.diff``` を適用するには、安定版の [github 上の git][GTGH] のソースコードが置かれているディレクトリより、以下のようにして差分ファイル ```git-HEAD-*-fix.diff``` を適用します。
 
@@ -76,19 +81,26 @@
 
 ### 2018/10/08 現在の追記
 
-2018/07/12 現在の git の[安定版のバージョンの 2.19.0][G180] 及び [github 上の git の HEAD の commit である fe8321ec][GIT_]に対応した差分ファイルである ```git-2.18.0-fix.diff, git-HEAD-fe8321ec-fix.diff``` を追加致しました。
+2018/07/12 現在の git の[安定版のバージョンの 2.19.0][G180] 及び [github 上の git の HEAD の commit である fe8321ec][GIT_]に対応した差分ファイルである ```git-2.19.0-fix.diff, git-HEAD-fe8321ec-fix.diff``` を追加致しました。
 
 これに伴い、差分ファイル ```git-HEAD-e3331758-fix.diff``` を削除しました。どうか御了承下さい。
+
+### 2019/01/18 現在の追記
+
+2019/01/18 現在の git の[安定版のバージョンの 2.19.2][G192] と [2.20.0][G200] 及び [github 上の git の HEAD の commit である 77556354][GIT_]に対応した差分ファイルである ```git-2.19.2-fix.diff, git-2.20.0-fix.diff, git-HEAD-fe8321ec-fix.diff``` を追加致しました。
+
+これに伴い、差分ファイル ```git-HEAD-fe8321ec-fix.diff``` を削除しました。どうか御了承下さい。
 
 <!-- 外部リンク一覧 -->
 
 [DBNR]:https://play.google.com/store/apps/details?id=com.cuntubuntu&hl=ja
 [ANDR]:https://www.android.com/intl/ja_jp/
 [GIT_]:https://git-scm.com/
-[G170]:https://www.kernel.org/pub/software/scm/git/git-2.17.0.tar.xz
 [G171]:https://www.kernel.org/pub/software/scm/git/git-2.17.1.tar.xz
-[G180]:https://www.kernel.org/pub/software/scm/git/git-2.18.0.tar.xz
-[G190]:https://www.kernel.org/pub/software/scm/git/git-2.19.0.tar.xz
+[G172]:https://www.kernel.org/pub/software/scm/git/git-2.17.2.tar.xz
+[G181]:https://www.kernel.org/pub/software/scm/git/git-2.18.1.tar.xz
+[G191]:https://www.kernel.org/pub/software/scm/git/git-2.19.1.tar.xz
+[G201]:https://www.kernel.org/pub/software/scm/git/git-2.20.1.tar.xz
 [GTGH]:https://github.com/git/git.git
 [LINK]:http://man7.org/linux/man-pages/man2/link.2.html
 [SLNK]:http://man7.org/linux/man-pages/man2/symlink.2.html

@@ -1,8 +1,8 @@
 diff --git a/Makefile b/Makefile
-index 13e1c5247..37c2ff798 100644
+index 1a44c811aa..3ce7946ce0 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -2049,7 +2049,6 @@ version.sp version.s version.o: EXTRA_CPPFLAGS = \
+@@ -2066,7 +2066,6 @@ version.sp version.s version.o: EXTRA_CPPFLAGS = \
  
  $(BUILT_INS): git$X
  	$(QUIET_BUILT_IN)$(RM) $@ && \
@@ -10,7 +10,7 @@ index 13e1c5247..37c2ff798 100644
  	ln -s $< $@ 2>/dev/null || \
  	cp $< $@
  
-@@ -2369,7 +2368,6 @@ git-remote-testsvn$X: remote-testsvn.o GIT-LDFLAGS $(GITLIBS) $(VCSSVN_LIB)
+@@ -2387,7 +2386,6 @@ git-remote-testsvn$X: remote-testsvn.o GIT-LDFLAGS $(GITLIBS) $(VCSSVN_LIB)
  
  $(REMOTE_CURL_ALIASES): $(REMOTE_CURL_PRIMARY)
  	$(QUIET_LNCP)$(RM) $@ && \
@@ -18,7 +18,7 @@ index 13e1c5247..37c2ff798 100644
  	ln -s $< $@ 2>/dev/null || \
  	cp $< $@
  
-@@ -2788,7 +2786,6 @@ endif
+@@ -2819,7 +2817,6 @@ endif
  		test -n "$(INSTALL_SYMLINKS)" && \
  		ln -s "$$destdir_from_execdir_SQ/$(bindir_relative_SQ)/$$p" "$$execdir/$$p" || \
  		{ test -z "$(NO_INSTALL_HARDLINKS)$(NO_CROSS_DIRECTORY_HARDLINKS)" && \
@@ -26,7 +26,7 @@ index 13e1c5247..37c2ff798 100644
  		  cp "$$bindir/$$p" "$$execdir/$$p" || exit; } \
  	  done; \
  	} && \
-@@ -2797,7 +2794,6 @@ endif
+@@ -2828,7 +2825,6 @@ endif
  		test -n "$(INSTALL_SYMLINKS)" && \
  		ln -s "git$X" "$$bindir/$$p" || \
  		{ test -z "$(NO_INSTALL_HARDLINKS)" && \
@@ -34,7 +34,7 @@ index 13e1c5247..37c2ff798 100644
  		  ln -s "git$X" "$$bindir/$$p" 2>/dev/null || \
  		  cp "$$bindir/git$X" "$$bindir/$$p" || exit; } \
  	done && \
-@@ -2806,7 +2802,6 @@ endif
+@@ -2837,7 +2833,6 @@ endif
  		test -n "$(INSTALL_SYMLINKS)" && \
  		ln -s "$$destdir_from_execdir_SQ/$(bindir_relative_SQ)/git$X" "$$execdir/$$p" || \
  		{ test -z "$(NO_INSTALL_HARDLINKS)" && \
@@ -42,7 +42,7 @@ index 13e1c5247..37c2ff798 100644
  		  ln -s "git$X" "$$execdir/$$p" 2>/dev/null || \
  		  cp "$$execdir/git$X" "$$execdir/$$p" || exit; } \
  	done && \
-@@ -2816,7 +2811,6 @@ endif
+@@ -2847,7 +2842,6 @@ endif
  		test -n "$(INSTALL_SYMLINKS)" && \
  		ln -s "git-remote-http$X" "$$execdir/$$p" || \
  		{ test -z "$(NO_INSTALL_HARDLINKS)" && \
@@ -51,7 +51,7 @@ index 13e1c5247..37c2ff798 100644
  		  cp "$$execdir/git-remote-http$X" "$$execdir/$$p" || exit; } \
  	done && \
 diff --git a/config.c b/config.c
-index 3461993f0..dab23f616 100644
+index ff521eb27a..a6c82c9db6 100644
 --- a/config.c
 +++ b/config.c
 @@ -77,6 +77,53 @@ static int core_compression_seen;
@@ -108,7 +108,7 @@ index 3461993f0..dab23f616 100644
  static int config_file_fgetc(struct config_source *conf)
  {
  	return getc_unlocked(conf->u.file);
-@@ -2792,9 +2839,23 @@ int git_config_set_multivar_in_file_gently(const char *config_filename,
+@@ -2818,9 +2865,23 @@ int git_config_set_multivar_in_file_gently(const char *config_filename,
  		in_fd = -1;
  
  		if (chmod(get_lock_file_path(&lock), st.st_mode & 07777) < 0) {
@@ -133,7 +133,7 @@ index 3461993f0..dab23f616 100644
  		}
  
  		if (store.seen_nr == 0) {
-@@ -3030,9 +3091,21 @@ static int git_config_copy_or_rename_section_in_file(const char *config_filename
+@@ -3056,9 +3117,21 @@ static int git_config_copy_or_rename_section_in_file(const char *config_filename
  	}
  
  	if (chmod(get_lock_file_path(&lock), st.st_mode & 07777) < 0) {
@@ -158,7 +158,7 @@ index 3461993f0..dab23f616 100644
  
  	while (fgets(buf, sizeof(buf), config_file)) {
 diff --git a/git-gui/Makefile b/git-gui/Makefile
-index f10caedaa..de285aeb4 100644
+index f10caedaa7..de285aeb4b 100644
 --- a/git-gui/Makefile
 +++ b/git-gui/Makefile
 @@ -57,7 +57,7 @@ INSTALL_X1 =
