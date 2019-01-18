@@ -100,6 +100,8 @@
 [G172]:https://www.kernel.org/pub/software/scm/git/git-2.17.2.tar.xz
 [G181]:https://www.kernel.org/pub/software/scm/git/git-2.18.1.tar.xz
 [G191]:https://www.kernel.org/pub/software/scm/git/git-2.19.1.tar.xz
+[G192]:https://www.kernel.org/pub/software/scm/git/git-2.19.2.tar.xz
+[G200]:https://www.kernel.org/pub/software/scm/git/git-2.20.0.tar.xz
 [G201]:https://www.kernel.org/pub/software/scm/git/git-2.20.1.tar.xz
 [GTGH]:https://github.com/git/git.git
 [LINK]:http://man7.org/linux/man-pages/man2/link.2.html
