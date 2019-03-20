@@ -91,6 +91,12 @@
 
 これに伴い、差分ファイル ```git-HEAD-fe8321ec-fix.diff``` を削除しました。どうか御了承下さい。
 
+### 2019/03/20 現在の追記
+
+2019/03/20 現在の git の[安定版のバージョンの 2.21.0][G210] 及び [github 上の git の HEAD の commit である 0e94f7aa][GIT_]に対応した差分ファイルである ```git-2.21.0-fix.diff, git-HEAD-0e94f7aa-fix.diff``` を追加致しました。
+
+これに伴い、 ```git-2.21.0-fix.diff``` 以外の安定版の差分ファイル及び ```git-HEAD-77556354-fix.diff``` を削除しました。どうか御了承下さい。
+
 <!-- 外部リンク一覧 -->
 
 [DBNR]:https://play.google.com/store/apps/details?id=com.cuntubuntu&hl=ja
@@ -103,6 +109,7 @@
 [G192]:https://www.kernel.org/pub/software/scm/git/git-2.19.2.tar.xz
 [G200]:https://www.kernel.org/pub/software/scm/git/git-2.20.0.tar.xz
 [G201]:https://www.kernel.org/pub/software/scm/git/git-2.20.1.tar.xz
+[G210]:https://www.kernel.org/pub/software/scm/git/git-2.21.0.tar.xz
 [GTGH]:https://github.com/git/git.git
 [LINK]:http://man7.org/linux/man-pages/man2/link.2.html
 [SLNK]:http://man7.org/linux/man-pages/man2/symlink.2.html
