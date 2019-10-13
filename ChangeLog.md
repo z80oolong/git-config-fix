@@ -4,6 +4,18 @@
 
 なお、過去に Gist 上において "追記" として示した変更履歴についても、 "追記" の表記を "ChangeLog" と改め、最新の ChangeLog を先頭に並べ替えた上で再掲してあります。
 
+## 2019/10/14 現在の ChangeLog
+
+2019/10/14 現在の git の 安定版及び [github 上の git の HEAD の commit である 08da6496][GIT_]に対応した差分ファイルである ```git-HEAD-08da6496-fix.diff``` を追加致しました。
+
+## 2019/09/30 現在の ChangeLog
+
+この度は、本差分ファイルの更新が遅れまして、誠に申し訳ありません。
+
+2019/09/30 現在の git の 安定版及び [github 上の git の HEAD の commit である 4c861400][GIT_]に対応した差分ファイルである ```git-2.22.0-fix.diff, git-2.22.1-fix.diff, gitt-2.23.0-fix.diff, git-HEAD-4c861400-fix.diff``` を追加致しました。
+
+これに伴い、差分ファイル ```git-HEAD-ab15ad1a-fix.diff``` を ```obsolute/``` に移動いました。どうか御了承下さい。
+
 ## 2019/05/15 現在の ChangeLog
 
 2019/05/15 現在の git の [github 上の git の HEAD の commit である ab15ad1a][GIT_]に対応した差分ファイルである ```git-HEAD-ab15ad1a-fix.diff``` を追加致しました。
